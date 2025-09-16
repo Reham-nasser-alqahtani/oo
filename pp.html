@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>منتجاتنا</title>
+<style>
+ body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #dffdda;
+    }
+
+ header {
+   text-align: center;
+   background: #4CAF50;
+  color: white;
+    padding: 1px 50px;
+ display: flex;
+  border-radius: 8px;
+    align-items: center;
+   justify-content: space-between;
+ box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    main {
+   width: 1000px;
+      margin: 40px auto;
+       padding: 0 20px;
+    }
+
+ .grid {
+   display: grid;                    
+  grid-template-columns: repeat(2,1fr); /* عمودين متساويين */
+   gap:20px;                        
+    }
+
+.card {
+ background: white;
+  padding: 20px;
+   border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     text-align: center;
+      border: 2px solid #57e20c;
+     
+    }
+
+.card:hover {
+   transform: translateY(-5px);
+    }
+
+    .card img {
+       width: 100%;
+        border-radius: 8px;
+    }
+ header img {
+    width: 100px;
+      height: auto;
+       border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+       
+    }
+
+    .card h3 {
+        margin: 10px 0;
+ font-size:20px;
+    }
+
+ .card p {
+   color: #555;
+    font-size:15px;
+      margin-bottom: 15px;
+    }
+
+ .card button {
+ background: #4CAF50;
+   color: white;
+ border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+    }
+
+ .card button:hover {
+   background: #45a049;
+      transform: scale(1.05);
+    }
+   
+      footer {
+    background: #4CAF50;
+   padding: 10px;
+      border-radius: 8px;
+    text-align: center;
+     color: white;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+   font-size: 20px;
+}
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+</style>
+</head>
+<body>
+
+<header>
+<h1>منتجاتنا لليوم الوطني </h1>
+   <img src="img37.jpeg" alt="منتج  1">
+</header>
+
+<main>
+ <div class="grid">
+  <div class="card">
+       <img src="img36.jpeg" alt="منتج  1">
+      <h3>كرت العود</h3>
+     <p>السعر : 14 ريال </p>
+       <button>شراء</button>
+  </div>
+ <div class="card">
+     <img src="img33.jpeg" alt="منتج  2">
+  <h3> كوب مع ظرف قهوة سعودية</h3>
+  <p>السعر : 27 ريال </p>
+    <button>شراء</button>
+        </div>
+
+  <div class="card"> 
+   <img src="img31.jpeg" alt="منتج 3">
+    <h3> بروش معدني لليوم الوطني</h3>
+     <p>السعر : 12 ريال </p>
+       <button>شراء</button>
+        </div>
+
+   <div class="card">
+   <img src="img32.jpeg" alt="منتج  4">
+ <h3> تعليقة سيارة ورقية </h3>
+     <p>السعر : 23 ريال </p>
+    <button>شراء</button>
+     </div>
+
+ <div class="card">
+    <img src="img30.jpeg" alt="منتج  5">
+      <h3> تعليقة جلدية مع كرت ب تصميم لليوم الوطني</h3>
+      <p>السعر : 43 ريال </p>
+      <button>شراء</button>
+        </div>
+
+ <div class="card">
+ <img src="img34.jpeg" alt="منتج 6">
+   <h3> كرت مع ستيكر معدني</h3>
+ <p>السعر : 34 ريال </p>
+  <button>شراء</button>
+  </div>
+    </div>
+</main>
+<footer>جُلَّنار</footer>
+
+</body>
+</html>
