@@ -82,10 +82,11 @@
    align-items: center;
    text-align: center;
    color: rgb(29, 96, 29);
-   padding: 0 20px;
+   padding: 20px;
    border-radius: 10px;
    margin: 20px auto;
-   width: 1500px;
+   width: 90%;
+   max-width: 600px;
    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 
  }
@@ -253,15 +254,15 @@ button:hover {
     .footer-list li a:hover {
         color: #fff;
     }
- /* ===== Responsive ===== */
+
  @media (min-width: 768px) {
   .hero {
-
-    padding: 60px 40px;       /* 👈 زيادة البادينج */
+width: auto;
+    padding: 60px 40px;    
   }
 
   .hero h2 {
-    font-size: 36px;          /* 👈 تكبير حجم النص */
+    font-size: 36px;          
   }
 
   .hero p {
@@ -269,7 +270,7 @@ button:hover {
   }
 
   .hero button {
-    width: auto;              /* 👈 يرجع للحجم الطبيعي */
+    width: auto;              
     padding: 12px 25px;
   }
 
@@ -277,7 +278,7 @@ button:hover {
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(3, 1fr); /* 👈 3 أعمدة للديسكتوب */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 .login-btn,
