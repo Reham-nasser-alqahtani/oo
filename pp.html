@@ -8,107 +8,342 @@
   margin: 0;
   font-family: sans-serif;
   background: #dffdda;
-    }
+ }
 
  header {
    text-align: center;
-   background: #4CAF50;
-  color: white;
-    padding: 1px 50px;
- display: flex;
+   background: #dffdda;
+   color: rgb(19, 68, 13);
+   padding: 1px 50px;
+   display: flex;
+   border-radius: 8px;
+   align-items: center;
+   justify-content:space-between;
+  
+ }
+ .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;         /* مسافة بين الصورة والنص */
+  flex-direction: row-reverse; /* يجعل الصورة على اليسار والنص على اليمين */
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
   border-radius: 8px;
-    align-items: center;
-   justify-content: space-between;
- box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+ header h2{
+  justify-content: end;
+ }
+
+ header img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+ }
+  
+  
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      text-align: center;
+     
+      
     }
 
-    main {
-   width: 1000px;
-      margin: 40px auto;
-       padding: 0 20px;
+ nav a {
+    color: #070707;
+    text-decoration: none;
+      margin: 0 30px;
+    font-weight: bold;
+      font-size: 18px;
+         
+
     }
+   
+
+   nav a:hover {
+      color: #6af507;
+      font-size: 24px;
+   }
+ /* ===== Hero Section ===== */
+ .hero {
+   background: url('img40.jpg') center/cover no-repeat;
+   height: 400px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   color: rgb(29, 96, 29);
+   padding: 0 20px;
+   border-radius: 10px;
+   margin: 20px auto;
+   width: 1500px;
+   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+
+ }
+ .hero:hover {
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('img40.jpg') center/cover no-repeat;
+}
+
+
+ .hero h2 {
+   font-size:44px;
+   margin-bottom: 10px;
+ }
+
+ .hero p {
+   font-size: 26px;
+   margin-bottom: 20px;
+ }
+
+ .hero button {
+   background: #18540dcc;
+   color: #fefefe;
+   border: none;
+   padding: 10px 25px;
+   font-size: 16px;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: 0.3s;
+    width:30%;        /* 👈 زر بعرض كامل للجوال */
+   border-radius: 5px;
+ }
+
+ .hero button:hover {
+   background: rgb(64, 246, 44);
+   transform: scale(1.05);
+ }
+ 
+
+ main {
+    width: 100%;           /* يملأ كل عرض الصفحة */
+    max-width: 1200px;     /* الحد الأقصى للعرض، لتجنب توسع كبير جدًا */
+    margin: 40px auto;     /* يوسّطه أفقياً ويعطي مسافة من الأعلى والأسفل */
+    padding: 0 20px;       /* بادينج من الجوانب لتجنب التصاق المحتوى بالحافة */
+    box-sizing: border-box; /* يحسب البادينج داخل العرض */
+}
 
  .grid {
    display: grid;                    
-  grid-template-columns: repeat(2,1fr); /* عمودين متساويين */
+   grid-template-columns: repeat(3,1fr); /* عمودين متساويين */
    gap:20px;                        
-    }
+ }
 
-.card {
- background: white;
-  padding: 20px;
+ .card {
+   background: white;
+   padding: 20px;
    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-     text-align: center;
-      border: 2px solid #57e20c;
-     
-    }
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   text-align: center;
+   border: 2px solid #57e20c;
+ }
 
-.card:hover {
+ .card:hover {
    transform: translateY(-5px);
-    }
+ }
 
-    .card img {
-       width: 100%;
-        border-radius: 8px;
-    }
- header img {
-    width: 100px;
-      height: auto;
-       border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-       
-    }
+ .card img {
+   width: 100%;
+   border-radius: 8px;
+ }
 
-    .card h3 {
-        margin: 10px 0;
- font-size:20px;
-    }
+ .card h3 {
+   margin: 10px 0;
+   font-size:20px;
+ }
 
  .card p {
    color: #555;
-    font-size:15px;
-      margin-bottom: 15px;
-    }
-
- .card button {
- background: #4CAF50;
+   font-size:15px;
+   margin-bottom: 15px;
+ }
+button{ 
+   background: #4CAF50;
    color: white;
- border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
 
-    }
+}
+button:hover {
+   background: #45a049;
+   transform: scale(1.05);
+ }
+ .card button {
+   background: #4CAF50;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 5px;
+   cursor: pointer;
+ }
 
  .card button:hover {
    background: #45a049;
-      transform: scale(1.05);
-    }
-   
-      footer {
-    background: #4CAF50;
-   padding: 10px;
-      border-radius: 8px;
-    text-align: center;
-     color: white;
-        box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-   font-size: 20px;
+   transform: scale(1.05);
+ }
+ .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* يرتب المحتوى عموديًا */
+    align-items: center;     /* يرتب المحتوى أفقيًا */
+    height: 140px;
+    gap: 3px;
+    background: #ffffff;
+    margin: 30px 0;          /* مسافة من الأعلى والأسفل فقط */
+    padding: 20px;
+    width: 100%;             /* يملأ كل عرض الصفحة */
+    box-sizing: border-box;  /* يحسب البادينج داخل العرض */
 }
-@media (max-width: 700px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
+.center P {
+  font-size: larger;
+  color: #1d8d03;
+ }
+ footer {
+        background:  #18540dcc;
+        color: #fff;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
     }
+
+    .footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0 20px;
+        min-width: 150px;
+    }
+
+    .footer-list h3 {
+        margin-bottom: 10px;
+        color: #ffd700;
+        font-size: 18px;
+        border-bottom: 1px solid #555;
+        padding-bottom: 5px;
+    }
+
+    .footer-list li {
+        margin: 8px 0;
+        display: flex;
+        align-items: center; /* يوسّط الأيقونة مع النص */
+        gap: 8px; /* مسافة بين الأيقونة والنص */
+    }
+
+    .footer-list li i {
+        color: #ffd700; /* لون الأيقونة */
+        font-size: 18px;
+    }
+
+    .footer-list li a {
+        text-decoration: none;
+        color: #ddd;
+        transition: color 0.3s;
+    }
+
+    .footer-list li a:hover {
+        color: #fff;
+    }
+ /* ===== Responsive ===== */
+ @media (min-width: 768px) {
+  .hero {
+
+    padding: 60px 40px;       /* 👈 زيادة البادينج */
+  }
+
+  .hero h2 {
+    font-size: 36px;          /* 👈 تكبير حجم النص */
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .hero button {
+    width: auto;              /* 👈 يرجع للحجم الطبيعي */
+    padding: 12px 25px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 👈 عمودين للتابلت */
+  }
 }
- 
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 👈 3 أعمدة للديسكتوب */
+  }
+}
+.login-btn,
+.signup-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.login-btn:hover,
+.signup-btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+.auth-buttons {
+    display: flex;
+    gap: 10px; /* مسافة بين الزرين */
+}
+span {
+  font-size: 30px;
+  font-weight: bold;
+}
 </style>
 </head>
 <body>
 
-<header>
-<h1>منتجاتنا لليوم الوطني </h1>
-   <img src="img37.jpeg" alt="منتج  1">
+ <header>
+
+  <div class="auth-buttons">
+    <button class="login-btn">تسجيل الدخول</button>
+    <button class="signup-btn">اشتراك</button>
+  </div>
+
+
+  <nav>
+       <a href="#" class="cart">&#128722;</a>
+    <a href="">الرئيسية</a>
+    <a href="">المنتجات</a>
+    <a href="">تواصل معنا</a>
+
+
+  </nav>
+
+
+  <div class="logo">
+    <img src="img37.jpeg" alt="منتج 1">
+    <span>جُلَّنار</span>
+  </div>
 </header>
+
+
+
+<section class="hero">
+  <h2>احتفل باليوم الوطني مع منتجاتنا</h2>
+  <p>أفضل العروض والهدايا المميزة لليوم الوطني السعودي</p>
+  <button>تسوق الآن</button>
+</section>
 
 <main>
  <div class="grid">
@@ -118,43 +353,67 @@
      <p>السعر : 14 ريال </p>
        <button>شراء</button>
   </div>
- <div class="card">
+  <div class="card">
      <img src="img33.jpeg" alt="منتج  2">
-  <h3> كوب مع ظرف قهوة سعودية</h3>
-  <p>السعر : 27 ريال </p>
-    <button>شراء</button>
-        </div>
-
+     <h3> كوب مع ظرف قهوة سعودية</h3>
+     <p>السعر : 27 ريال </p>
+     <button>شراء</button>
+  </div>
   <div class="card"> 
    <img src="img31.jpeg" alt="منتج 3">
-    <h3> بروش معدني لليوم الوطني</h3>
-     <p>السعر : 12 ريال </p>
-       <button>شراء</button>
-        </div>
-
-   <div class="card">
-   <img src="img32.jpeg" alt="منتج  4">
- <h3> تعليقة سيارة ورقية </h3>
-     <p>السعر : 23 ريال </p>
-    <button>شراء</button>
-     </div>
-
- <div class="card">
-    <img src="img30.jpeg" alt="منتج  5">
-      <h3> تعليقة جلدية مع كرت ب تصميم لليوم الوطني</h3>
-      <p>السعر : 43 ريال </p>
-      <button>شراء</button>
-        </div>
-
- <div class="card">
- <img src="img34.jpeg" alt="منتج 6">
-   <h3> كرت مع ستيكر معدني</h3>
- <p>السعر : 34 ريال </p>
-  <button>شراء</button>
+   <h3> بروش معدني لليوم الوطني</h3>
+   <p>السعر : 12 ريال </p>
+   <button>شراء</button>
   </div>
-    </div>
+  <div class="card">
+   <img src="img32.jpeg" alt="منتج  4">
+   <h3> تعليقة سيارة ورقية </h3>
+   <p>السعر : 23 ريال </p>
+   <button>شراء</button>
+  </div>
+  <div class="card">
+    <img src="img30.jpeg" alt="منتج  5">
+    <h3> تعليقة جلدية مع كرت ب تصميم لليوم الوطني</h3>
+    <p>السعر : 43 ريال </p>
+    <button>شراء</button>
+  </div>
+  <div class="card">
+   <img src="img34.jpeg" alt="منتج 6">
+   <h3> كرت مع ستيكر معدني</h3>
+   <p>السعر : 34 ريال </p>
+   <button>شراء</button>
+  </div>
+ </div>
+<div class="center">
+  <p>للطلب من هنا</p>
+  <button>اضغط هنا</button>
+
+</div>
 </main>
-<footer>جُلَّنار</footer>
+<footer><h1>جُلَّنار</h1> 
+
+    <ul class="footer-list">
+        <h3>عن الموقع</h3>
+        <li><i class="fa-solid fa-circle-info"></i><a href="#">من نحن</a></li>
+        <li><i class="fa-solid fa-gear"></i><a href="#">خدماتنا</a></li>
+        <li><i class="fa-solid fa-question"></i><a href="#">الأسئلة الشائعة</a></li>
+    </ul>
+
+    <ul class="footer-list">
+        <h3>تواصل معنا</h3>
+        <li><i class="fa-brands fa-whatsapp"></i><a href="#">واتساب</a></li>
+        <li><i class="fa-solid fa-envelope"></i><a href="#">البريد الإلكتروني</a></li>
+        <li><i class="fa-brands fa-instagram"></i><a href="#">إنستجرام</a></li>
+    </ul>
+
+    <ul class="footer-list">
+        <h3>روابط مهمة</h3>
+        <li><i class="fa-solid fa-user-shield"></i><a href="#">سياسة الخصوصية</a></li>
+        <li><i class="fa-solid fa-file-contract"></i><a href="#">الشروط والأحكام</a></li>
+        <li><i class="fa-solid fa-map"></i><a href="#">خريطة الموقع</a></li>
+    </ul>
+
+</footer>
 
 </body>
 </html>
